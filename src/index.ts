@@ -1,5 +1,5 @@
-const returningUserDisplay = document.querySelector('#returning-user')
-const userNameDisplay = document.querySelector('#user')
+const returningUserDisplay = document.querySelector('#returning-user') as HTMLElement
+const userNameDisplay = document.querySelector('#user') as HTMLElement
 const reviewTotalDisplay = document.querySelector('#reviews') as HTMLElement
 
 const reviews = [
@@ -34,9 +34,9 @@ const displayReviewCount = (count: number, lastReviewer: string, isLastReviewerL
 
 displayReviewCount(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
-const displayUser = (isReturning: boolean, userInfo: object) => {
+const displayUser = (isReturning: boolean, userName: string) => {
     if(isReturning) returningUserDisplay.innerHTML = ' back'
-    userNameDisplay.innerHTML = `, ${userInfo.userName.first}`
+    userNameDisplay.innerHTML = `, ${userName}`
 }
 
-displayUser(user.isReturning, user)
+displayUser(user.isReturning, user.userName.first)
