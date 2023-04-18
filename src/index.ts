@@ -25,7 +25,7 @@ const reviews = [
 ]
 
 const displayReviewCount = (count: number) => {
-    reviewTotalDisplay.innerHTML = count.toString()
+    reviewTotalDisplay.innerHTML = `Reviews: ${count.toString()}`
 }
 
 displayReviewCount(reviews.length)
