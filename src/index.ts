@@ -25,7 +25,7 @@ const reviews = [
 ]
 
 const displayReviewCount = (count: number, lastReviewer: string, isLastReviewerLoyalty: boolean) => {
-    reviewTotalDisplay.innerHTML = `Reviews: ${count.toString()} | last reviewed by ${lastReviewer} ${isLastReviewerLoyalty ? '⭐️' : ''}`
+    reviewTotalDisplay.innerHTML = `Reviews: ${count.toString()} | last reviewed by ${lastReviewer} ${isLastReviewerLoyalty ? '&#11088;' : ''}`
 }
 
 displayReviewCount(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
