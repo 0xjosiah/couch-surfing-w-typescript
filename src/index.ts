@@ -23,8 +23,20 @@ const reviews = [
     },
 ]
 
+const user = {
+    userName: { first: 'Bobby', last: 'Brown' },
+    isReturning: false
+}
+
 const displayReviewCount = (count: number, lastReviewer: string, isLastReviewerLoyalty: boolean) => {
     reviewTotalDisplay.innerHTML = `Reviews: ${count.toString()} | last reviewed by ${lastReviewer} ${isLastReviewerLoyalty ? '&#11088;' : ''}`
 }
 
 displayReviewCount(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
+
+const displayUser = (isReturning: boolean, userInfo: object) => {
+    const returnMsg = isReturning ? 'back ' : ''
+    userNameDisplay.innerHTML = `${returnMsg}, ${userInfo.userName.first}`
+}
+
+displayUser(user.isReturning, user)
