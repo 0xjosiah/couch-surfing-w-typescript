@@ -35,8 +35,8 @@ const displayReviewCount = (count: number, lastReviewer: string, isLastReviewerL
 displayReviewCount(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
 const displayUser = (isReturning: boolean, userInfo: object) => {
-    const returnMsg = isReturning ? ' back' : ''
-    userNameDisplay.innerHTML = `${returnMsg}, ${userInfo.userName.first}`
+    if(isReturning) returningUserDisplay.innerHTML = ' back'
+    userNameDisplay.innerHTML = `, ${userInfo.userName.first}`
 }
 
 displayUser(user.isReturning, user)
