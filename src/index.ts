@@ -23,9 +23,14 @@ const reviews = [
     },
 ]
 
-const user = {
+const user: {
+    userName: { first: string, last: string },
+    isReturning: boolean,
+    age: number
+} = {
     userName: { first: 'Bobby', last: 'Brown' },
-    isReturning: true
+    isReturning: true,
+    age: 29
 }
 
 const displayReviewCount = (count: number, lastReviewer: string, isLastReviewerLoyalty: boolean) => {
